@@ -62,7 +62,7 @@ const register = (req,res,next)=>{
                     console.log(digit);
                     let SMS = {
                         authorization:process.env.FAST2SMS,
-                        message: "Through a login use the OTP : "+digit,
+                        message: "login to use the OTP : "+digit,
                         numbers:[ data.mobileNumber]
                     }
                     fastSms.sendMessage(SMS).then(result=>{
